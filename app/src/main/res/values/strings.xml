@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Smart Library</string>
+    <string name="app_tagline">Middle East College Library Management System</string>
+
+    <!-- Login -->
+    <string name="login_title">Welcome Back</string>
+    <string name="login_subtitle">Please enter your credentials</string>
+    <string name="hint_email">Email Address</string>
+    <string name="hint_password">Password</string>
+    <string name="btn_login">Login</string>
+    <string name="link_register">Don\'t have an account? Register here</string>
+    <string name="link_forgot">Forgot password?</string>
+
+    <!-- Register -->
+    <string name="register_title">Create Account</string>
+    <string name="hint_fullname">Full Name</string>
+    <string name="hint_confirm_password">Confirm Password</string>
+    <string name="hint_phone">Phone Number</string>
+    <string name="btn_register">Register</string>
+    <string name="link_login">Already have an account? Login</string>
+
+    <!-- Book Management -->
+    <string name="book_mgmt_title">Book Management</string>
+    <string name="book_mgmt_subtitle">Smart Library Admin Panel</string>
+    <string name="hint_title">Book Title</string>
+    <string name="hint_author">Author</string>
+    <string name="hint_isbn">ISBN</string>
+    <string name="hint_category">Category</string>
+    <string name="btn_insert">Insert</string>
+    <string name="btn_update">Update</string>
+    <string name="btn_delete">Delete</string>
+    <string name="btn_view_all">View All</string>
+    <string name="btn_reset">Reset</string>
+    <string name="btn_close">Close</string>
+    <string name="btn_save">Save</string>
+
+    <!-- Transaction -->
+    <string name="transaction_title">Fine Calculator</string>
+    <string name="transaction_subtitle">Overdue Book Transaction</string>
+    <string name="hint_member_name">Member Name</string>
+    <string name="hint_book_title">Book Title</string>
+    <string name="hint_due_date">Due Date</string>
+    <string name="hint_days_overdue">Days Overdue</string>
+    <string name="btn_calculate">Calculate</string>
+    <string name="fine_formula">Fine = Days Overdue × OMR 0.100</string>
+    <string name="fine_label">CALCULATED FINE</string>
+    <string name="fine_default">OMR 0.000</string>
+
+    <!-- Report -->
+    <string name="report_title">All Book Records</string>
+    <string name="hint_search">Search by title, author or ISBN...</string>
+
+    <!-- Validation messages -->
+    <string name="err_field_required">This field is required</string>
+    <string name="err_invalid_email">Please enter a valid email address</string>
+    <string name="err_password_short">Password must be at least 8 characters</string>
+    <string name="err_password_mismatch">Passwords do not match</string>
+    <string name="err_invalid_isbn">ISBN must be 10 or 13 digits</string>
+    <string name="err_invalid_phone">Phone number must be at least 8 digits</string>
+    <string name="err_invalid_days">Please enter a valid positive number</string>
+    <string name="err_select_record">Please select a record first</string>
+    <string name="err_duplicate_isbn">A book with this ISBN already exists</string>
+    <string name="err_no_internet">No internet connection. Please check your network</string>
+
+    <!-- Toast messages -->
+    <string name="toast_insert_success">Book added successfully</string>
+    <string name="toast_update_success">Book updated successfully</string>
+    <string name="toast_delete_success">Record deleted</string>
+    <string name="toast_fields_unlocked">Fields unlocked. Edit then tap Save.</string>
+    <string name="toast_invalid_creds">Invalid credentials, please try again</string>
+    <string name="toast_register_success">Account created. Please login.</string>
+
+    <!-- Dialogs -->
+    <string name="dialog_delete_title">Confirm Delete</string>
+    <string name="dialog_delete_msg">Are you sure you want to delete this record?</string>
+    <string name="dialog_exit_title">Exit</string>
+    <string name="dialog_exit_msg">Are you sure you want to exit?</string>
+    <string name="dialog_yes">Yes</string>
+    <string name="dialog_no">No</string>
+
+    <!-- Categories -->
+    <string-array name="book_categories">
+        <item>Select Category</item>
+        <item>Technology</item>
+        <item>Science</item>
+        <item>Fiction</item>
+        <item>History</item>
+        <item>Mathematics</item>
+        <item>Other</item>
+    </string-array>
+
+    <!-- Roles -->
+    <string-array name="user_roles">
+        <item>Librarian</item>
+        <item>Admin</item>
+        <item>Member</item>
+    </string-array>
+</resources>

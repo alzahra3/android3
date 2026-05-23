@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/background">
+
+    <!-- Header bar -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/primary"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:padding="14dp">
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Book Management"
+                android:textSize="15sp"
+                android:textStyle="bold"
+                android:textColor="@color/text_white"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Smart Library Admin Panel"
+                android:textSize="10sp"
+                android:textColor="#b0bcd8"/>
+        </LinearLayout>
+        <TextView
+            android:id="@+id/btnMenu"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="☰"
+            android:textSize="18sp"
+            android:textColor="@color/text_white"
+            android:clickable="true"
+            android:focusable="true"/>
+    </LinearLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <!-- Form fields -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingLeft="14dp"
+                android:paddingRight="14dp">
+
+                <TextView style="@style/FieldLabel" android:text="Book Title *"/>
+                <EditText
+                    android:id="@+id/etTitle"
+                    style="@style/LibraryInput"
+                    android:hint="@string/hint_title"
+                    android:enabled="false"
+                    android:background="@drawable/bg_input_disabled"
+                    android:inputType="textCapWords"
+                    android:maxLines="1"/>
+
+                <TextView style="@style/FieldLabel" android:text="Author *"/>
+                <EditText
+                    android:id="@+id/etAuthor"
+                    style="@style/LibraryInput"
+                    android:hint="@string/hint_author"
+                    android:enabled="false"
+                    android:background="@drawable/bg_input_disabled"
+                    android:inputType="textCapWords"
+                    android:maxLines="1"/>
+
+                <TextView style="@style/FieldLabel" android:text="ISBN *"/>
+                <EditText
+                    android:id="@+id/etIsbn"
+                    style="@style/LibraryInput"
+                    android:hint="@string/hint_isbn"
+                    android:enabled="false"
+                    android:background="@drawable/bg_input_disabled"
+                    android:inputType="number"
+                    android:maxLines="1"/>
+
+                <TextView style="@style/FieldLabel" android:text="Category"/>
+                <Spinner
+                    android:id="@+id/spinCategory"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/bg_input_disabled"
+                    android:enabled="false"
+                    android:layout_marginTop="3dp"
+                    android:entries="@array/book_categories"/>
+
+            </LinearLayout>
+
+            <!-- Row 1: Insert, Update, Delete -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:paddingLeft="14dp"
+                android:paddingRight="14dp"
+                android:paddingTop="12dp"
+                android:weightSum="3">
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btnInsert"
+                    style="@style/BtnSuccess"
+                    android:text="Insert"/>
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btnUpdate"
+                    style="@style/BtnWarning"
+                    android:text="Update"
+                    android:enabled="false"/>
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btnDelete"
+                    style="@style/BtnDanger"
+                    android:text="Delete"
+                    android:enabled="false"/>
+            </LinearLayout>
+
+            <!-- Row 2: View All, Reset, Close -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:paddingLeft="14dp"
+                android:paddingRight="14dp"
+                android:paddingTop="6dp"
+                android:weightSum="3">
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btnViewAll"
+                    style="@style/BtnPrimary"
+                    android:text="View All"/>
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btnReset"
+                    style="@style/BtnGrey"
+                    android:text="Reset"/>
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btnClose"
+                    style="@style/BtnOutline"
+                    android:text="Close"/>
+            </LinearLayout>
+
+            <!-- Section header: records -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Book Records"
+                android:textSize="10sp"
+                android:textStyle="bold"
+                android:textColor="@color/accent"
+                android:textAllCaps="true"
+                android:letterSpacing="0.06"
+                android:background="@color/section_header"
+                android:padding="8dp"
+                android:layout_marginTop="10dp"/>
+
+            <!-- ListView for records -->
+            <ListView
+                android:id="@+id/lvBooks"
+                android:layout_width="match_parent"
+                android:layout_height="280dp"
+                android:divider="@color/divider"
+                android:dividerHeight="1dp"/>
+
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>
